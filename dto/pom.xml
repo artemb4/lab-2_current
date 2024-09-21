@@ -12,7 +12,7 @@
     </parent>
 
     <groupId>org.example</groupId>
-    <artifactId>service</artifactId>
+    <artifactId>dto</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -23,9 +23,14 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.example</groupId>
-            <artifactId>dto</artifactId>
-            <version>${project.version}</version>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.0.0.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.3</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -34,24 +39,8 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>4.0.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.modelmapper/modelmapper -->
-        <dependency>
-            <groupId>org.modelmapper</groupId>
-            <artifactId>modelmapper</artifactId>
-            <version>3.2.1</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
@@ -59,6 +48,11 @@
             <artifactId>lombok</artifactId>
             <version>1.18.32</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.0.0</version>
         </dependency>
     </dependencies>
     
